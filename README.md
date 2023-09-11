@@ -35,7 +35,9 @@ This application is developed using Maven, Spring Boot, and the H2 database. Hen
       {
     "accessToken": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoic2h1YmhhIiwiZXhwIjoxNjk0NDE1Mjg1LCJpYXQiOjE2OTQzNzkyODUsInNjb3BlIjoiQ1VTVE9NRVIifQ.Ft_jjVbWv_KJAVWgcUA6xVNtiYrYMZxV2zMFIqxVn-ZrXKfld16EeXPdVnngT1oYtCCLy2ckt50342BUjK8Izd2jmZykJQs89AH4novGwNtHA6OImrziPw10jRSs9zV3jc2JkVkDAOTn4XcNHFNV2Ldr4FEUe6DHNDYgy8cILD1QJ3Q_ABIzHo_mzh5NlhgqzjvLKylsHr75xvOXrOskDUMI9ONsPun9AaAKnKg0vs6j6JT0MJF3GJMhcRzvtZ1OEkLz2xdYDkeBFKBolQfudRCkpZP3dgDQr3QJv7Gv6pdQ0WD447KnshReDY8ebiqyqPEMCGq9x9LvYHc7lnNQFg"
 }
+
 8.Using above token initiate transfer and also can get overview of user with token
+
 9. Initiate transfer by using above toekn in Authrorization header with bearer schema
     End point:http://localhost:8080/transfer(Post Request)
     Sample Request:
@@ -46,7 +48,8 @@ This application is developed using Maven, Spring Boot, and the H2 database. Hen
 }
   Sample Response:
    Transfer successful.
-10. Get Overview of account(Get Request)
+   
+11. Get Overview of account(Get Request)
    End Point:http://localhost:8080/overview
    {
     "accountNumber": "NL61ABNA5400702561",
@@ -55,8 +58,9 @@ This application is developed using Maven, Spring Boot, and the H2 database. Hen
     "currency": "EUR"
 }
 
-11. Descoped document id functionality
-12.Assuming mobile number provided is correct one which is used previously
+12. Descoped document id functionality
+    
+13.Assuming mobile number provided is correct one which is used previously
 
      
 
