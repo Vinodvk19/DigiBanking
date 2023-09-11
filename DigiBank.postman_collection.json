@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "49590a81-fb47-40ab-bdeb-7e8ce1b6fcf4",
+		"name": "DigiBank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29496625"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\":\"shubha\",\r\n\"fullName\":\"Kumari\",\r\n\"mobileNumber\":\"3245451\",\r\n\"dateOfBirth\":\"15/05/1987\",\r\n\"country\":\"NL\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/register"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/logon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"shubha\",\r\n    \"password\": \"1Uqpnmm5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/logon"
+			},
+			"response": []
+		},
+		{
+			"name": "overview",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoic2h1YmhhIiwiZXhwIjoxNjk0NDE1Mjg1LCJpYXQiOjE2OTQzNzkyODUsInNjb3BlIjoiQ1VTVE9NRVIifQ.Ft_jjVbWv_KJAVWgcUA6xVNtiYrYMZxV2zMFIqxVn-ZrXKfld16EeXPdVnngT1oYtCCLy2ckt50342BUjK8Izd2jmZykJQs89AH4novGwNtHA6OImrziPw10jRSs9zV3jc2JkVkDAOTn4XcNHFNV2Ldr4FEUe6DHNDYgy8cILD1QJ3Q_ABIzHo_mzh5NlhgqzjvLKylsHr75xvOXrOskDUMI9ONsPun9AaAKnKg0vs6j6JT0MJF3GJMhcRzvtZ1OEkLz2xdYDkeBFKBolQfudRCkpZP3dgDQr3QJv7Gv6pdQ0WD447KnshReDY8ebiqyqPEMCGq9x9LvYHc7lnNQFg"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoia3VtYXIiLCJleHAiOjE2OTQzMTg2MTYsImlhdCI6MTY5NDI4MjYxNiwic2NvcGUiOiJDVVNUT01FUiJ9.x7Fd-kSzFcmlDqL-nIRw62TQPeLLIkV3d56s5ElHJ8h_gobUvXckFmAq62k-oSGo43f1Mlp5PbpqJTZSaq8rQrH2mnwSsbrS9lusdZrMRBbJDcHyXcYrAj7Eslkd2UyduLe-F3Esl2kyOdEhR8ChkGRWUOBqx0ZLjnNnXt6aCd_8eRQXT_TbRM0oB3FAu7i2fM9uZNM8VlrzSBNeUZ_G1qOaanZLMikhhUGhzZ3zppThIxqYmF3DMtHzZi3AQPLe2t3CcKpLVlIIqKPXgK1xydZ3Uqd-fvID_HFiCXQNsJMtpzPF-0O8pA1AlWW2Vtqn9oVNPxNrDnaSatyAl5Q6sA",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/overview"
+			},
+			"response": []
+		},
+		{
+			"name": "transfer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoicmFuaTEiLCJleHAiOjE2OTQ0MTE3MjUsImlhdCI6MTY5NDM3NTcyNSwic2NvcGUiOiJDVVNUT01FUiJ9.moUpDg8q9lMj9Z25Ap0cgUA-Naewo3iF_qLrW3GhANt_vurw0G47JXpEY3_3ArkknnzBM9B9pnLOlfmaR9y_YXzRtlRdqMMhtdugCTGeAQe-V6ACVgCK0QbDIoUBtrrZxbLgoTpm8b5se0KusEZUGGKnsemt6rMvSp87lycJt2GY1X18hnCKhIJJfVPjCHWoNZv0PjQkURS2bBBvkfvB3rcfSIwAjF9hk4bTK3OQzN5x4OQH1lf2uKULXHO2H7aTt4IGtHNKEeGpVjZB1SFo6rYT1kDWvJkA6CLdL8Y95b5ACpgqQBzbgumcryekwYglhe3QBexXH4hhiMHXgGcAIA"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"originatorAccountNumber\":\"NL21ABNA6684106181\",\r\n\"counterpartyAccountNumber\":\"NL61ABNA5400702561\",\r\n\"amount\":10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/transfer"
+			},
+			"response": []
+		}
+	]
+}
