@@ -81,25 +81,6 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>org.openapitools</groupId>
-				<artifactId>openapi-generator-maven-plugin</artifactId>
-				<version>7.0.0</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<inputSpec>src/main/resources/openapi.yaml</inputSpec> <!-- Path to your OpenAPI YAML file -->
-							<generatorName>Digital Banking API</generatorName> <!-- Generator name (e.g., java, spring) -->
-							<apiPackage>com.nl.bank.digibank.generated</apiPackage> <!-- Package name for generated API interfaces -->
-							<modelPackage>com.nl.bank.digibank.generated</modelPackage> <!-- Package name for generated model classes -->
-							<generateSupportingFiles>false</generateSupportingFiles>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
